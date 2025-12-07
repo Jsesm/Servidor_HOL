@@ -1,12 +1,13 @@
 import random
 
 def traducir_palo(numeroReal, numeroNo):
-    mi_lista = []      
+    mi_set = set()     
     numeros= generar_numeros_aleatorios()
-    mi_lista.append(traducir_valor(str(numeroReal)))
-    mi_lista.append(traducir_valor(str(numeroNo)))
+    mi_set.add(traducir_valor(str(numeroReal)))
+    mi_set.add(traducir_valor(str(numeroNo)))
     for num in numeros:
-        mi_lista.append(traducir_valor(str(num)))
+        mi_set.add(traducir_valor(str(num)))
+    mi_lista= list(mi_set)
     random.shuffle(mi_lista)
     return mi_lista
 
