@@ -18,7 +18,7 @@ def generar_numeros_aleatorios():
 def traducir_valor(valor):
     valor = str(valor).upper()
     
-    if valor == "ACE":
+    if valor=="1" or valor == "ACE":
         return "A"
     elif valor == "11" or valor == "JACK":
         return "J"
